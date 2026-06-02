@@ -19,7 +19,7 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .site-nav { align-items: center; background: rgba(13,31,16,0.32); backdrop-filter: blur(1px); display: flex; justify-content: space-between; left: 0; padding: 0.22rem clamp(1.25rem, 4vw, 2.5rem); position: absolute; top: 0; width: 100%; z-index: 5; }
 .site-brand, .site-nav-links a { font-family: 'Bitter', serif; font-size: 0.68rem; letter-spacing: 0.2em; text-decoration: none; text-transform: uppercase; }
 .site-brand { align-items: center; display: inline-flex; line-height: 0; }
-.site-brand img { display: block; height: auto; max-width: min(128px, 34vw); width: 128px; }
+.site-brand img { display: block; height: auto; max-width: min(72px, 20vw); width: 72px; }
 .site-nav-links { align-items: center; display: flex; gap: clamp(1rem, 3vw, 2.2rem); }
 .site-nav-links a { color: rgba(245,240,232,0.72); }
 .nav-toggle { align-items: center; background: transparent; border: 0; color: rgba(245,240,232,0.86); cursor: pointer; display: none; height: 38px; justify-content: center; padding: 0; width: 38px; }
@@ -82,6 +82,7 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .related-card { display: block; padding: 1.5rem; text-align: left; text-decoration: none; }
 @media (max-width: 768px) {
   .site-nav { flex-wrap: wrap; padding: 0.45rem 1.2rem; }
+  .site-brand img { max-width: min(60px, 22vw); width: 60px; }
   .nav-toggle { display: inline-flex; }
   .site-nav-links { background: rgba(13,31,16,0.9); display: none; flex-basis: 100%; flex-direction: column; margin-top: 0.45rem; width: 100%; }
   .site-nav.is-open .site-nav-links { display: flex; }

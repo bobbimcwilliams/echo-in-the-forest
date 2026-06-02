@@ -9,7 +9,7 @@ export function SiteNav({ variant = 'home' }: { variant?: 'home' | 'article' }) 
   return (
     <nav className={`site-nav ${variant === 'home' ? 'home-nav' : 'article-site-nav'} ${isOpen ? 'is-open' : ''}`}>
       <Link className="site-brand" href="/">
-        <Image src="/assets/echo-logo5.png" alt="Echo in the Forest" width={160} height={78} priority />
+        <Image src="/assets/echo-nav-mark.png" alt="Echo in the Forest" width={92} height={82} priority />
       </Link>
       <button className="nav-toggle" type="button" aria-label="Open navigation menu" onClick={() => setIsOpen(!isOpen)}>
         <span /><span /><span />
