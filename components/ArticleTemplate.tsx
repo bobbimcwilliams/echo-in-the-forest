@@ -17,6 +17,9 @@ export function ArticleTemplate({ article }: { article: Article }) {
             <p className="article-subtitle">{article.subtitle}</p>
           </div>
         </header>
+        <div className="article-transition" aria-hidden="true">
+          <span />
+        </div>
         <article className="article-body">
           {renderMarkdown(article.body)}
         </article>

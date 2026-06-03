@@ -15,7 +15,6 @@ export function HomeHero() {
         <div className="hero-walk-note">
           <h2>Let&apos;s Take a Walk</h2>
           <p>The path winds through questions,<br />stories, and the occasional rabbit trail.</p>
-          <p>Come along if you&apos;d like.</p>
         </div>
       </div>
     </section>
