@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import type { Article } from '@/lib/articles';
 
 export function EchoesSection({ articles }: { articles: Article[] }) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const featured = articles.find((article) => article.featured) ?? articles[0];
   const others = articles.filter((article) => article.slug !== featured.slug);
   const placeholders = [
@@ -14,8 +19,27 @@ export function EchoesSection({ articles }: { articles: Article[] }) {
   const gridPlaceholderCount = Math.max(0, 3 - gridItems.length);
   const gridPlaceholders = placeholders.slice(0, gridPlaceholderCount);
   const rowPlaceholders = placeholders.slice(gridPlaceholderCount, gridPlaceholderCount + Math.max(0, 2 - rowItems.length));
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '0px 0px -18% 0px', threshold: 0.18 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="echoes" id="echoes">
+    <section className={`echoes ${isVisible ? 'is-visible' : ''}`} id="echoes" ref={sectionRef}>
       <div className="echoes-bg-texture" />
       <div className="echoes-container">
         <div className="echoes-header">
