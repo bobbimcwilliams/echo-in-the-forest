@@ -49,11 +49,46 @@ export function ArticleTemplate({ article }: { article: Article }) {
 }
 
 function renderMarkdown(markdown: string) {
-  return markdown.split(/\n\n+/).map((block, index) => {
+  const blocks = markdown.split(/\n\n+/);
+  const rendered = [];
+
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
     const clean = block.trim();
-    if (clean.startsWith('>')) {
-      return <blockquote className="pull-quote" key={index}><p>{clean.replace(/^>\s?/, '')}</p></blockquote>;
+    if (clean.startsWith(':::accordion')) {
+      const summary = clean.replace(/^:::accordion\s?/, '') || 'Read more';
+      const accordionBlocks = [];
+      index += 1;
+      while (index < blocks.length && blocks[index].trim() !== ':::') {
+        accordionBlocks.push(blocks[index]);
+        index += 1;
+      }
+      rendered.push(
+        <details className="article-accordion" key={index}>
+          <summary>{summary}</summary>
+          <div className="article-accordion-content">{renderMarkdown(accordionBlocks.join('\n\n'))}</div>
+        </details>
+      );
+      continue;
     }
-    return <p key={index}>{clean}</p>;
-  });
+    if (clean.startsWith('### ')) {
+      const heading = clean.replace(/^###\s?/, '');
+      const className = ['The Scripture', 'How I Look at It Now'].includes(heading)
+        ? 'article-section-subtitle'
+        : 'article-scripture-heading';
+      rendered.push(<h3 className={className} key={index}>{heading}</h3>);
+      continue;
+    }
+    if (clean.startsWith('## ')) {
+      rendered.push(<h2 className="article-section-title" key={index}>{clean.replace(/^##\s?/, '')}</h2>);
+      continue;
+    }
+    if (clean.startsWith('>')) {
+      rendered.push(<blockquote className="pull-quote" key={index}><p>{clean.replace(/^>\s?/, '')}</p></blockquote>);
+      continue;
+    }
+    rendered.push(<p key={index}>{clean}</p>);
+  }
+
+  return rendered;
 }
