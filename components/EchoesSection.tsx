@@ -23,19 +23,37 @@ export function EchoesSection({ articles }: { articles: Article[] }) {
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
+    let hasScrolled = window.scrollY > 24;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (hasScrolled && entry.isIntersecting) {
           setIsVisible(true);
           observer.disconnect();
+          window.removeEventListener('scroll', handleScroll);
         }
       },
-      { rootMargin: '0px 0px -18% 0px', threshold: 0.18 },
+      { rootMargin: '0px 0px -24% 0px', threshold: 0.22 },
     );
 
+    const handleScroll = () => {
+      hasScrolled = true;
+      const bounds = section.getBoundingClientRect();
+      const triggerPoint = window.innerHeight * 0.82;
+      if (bounds.top < triggerPoint && bounds.bottom > 0) {
+        setIsVisible(true);
+        observer.disconnect();
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
     observer.observe(section);
-    return () => observer.disconnect();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
