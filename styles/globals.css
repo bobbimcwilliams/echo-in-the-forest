@@ -95,8 +95,8 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .curious-thing { background: var(--forest-dark); padding: 2rem 2rem 2.15rem; text-align: center; }
 .curious-label { color: rgba(245,240,232,0.56); font-size: 0.68rem; letter-spacing: 0.18em; margin-bottom: 0.55rem; text-transform: uppercase; }
 .curious-fact { color: rgba(245,240,232,0.86); font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(1.05rem, 2vw, 1.38rem); font-style: italic; }
-.article-page { background: var(--warm-white); min-height: 100vh; position: relative; }
-.article-bg { background: linear-gradient(to bottom, rgba(250,248,243,0.9), rgba(245,240,232,0.96)), url('/assets/forest-clearing-background.png') center/cover no-repeat; inset: 0; pointer-events: none; position: fixed; }
+.article-page { background: linear-gradient(to bottom, rgba(250,248,243,0.9), rgba(245,240,232,0.96)), url('/assets/forest-clearing-background.png') center top/cover no-repeat var(--warm-white); min-height: 100vh; position: relative; }
+.article-bg { display: none; }
 .article-page main { position: relative; z-index: 1; }
 .article-banner { align-items: center; background: radial-gradient(circle at 50% 34%, rgba(245,240,232,0.14), transparent 34%), linear-gradient(115deg, #07150a, var(--forest-dark), var(--forest-mid)); display: flex; justify-content: center; min-height: clamp(315px, 30vw, 385px); padding: 6.75rem 2rem 4.1rem; text-align: center; }
 .article-date { color: rgba(245,240,232,0.68); font-size: 0.7rem; letter-spacing: 0.28em; margin-bottom: 0.95rem; text-transform: uppercase; }
