@@ -43,7 +43,7 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .article-site-nav { background: transparent; position: absolute; }
 .article-site-nav .site-nav-links a { color: rgba(245,240,232,0.82); text-shadow: none; }
 .hero { align-items: center; display: flex; justify-content: center; min-height: 100vh; overflow: hidden; padding: clamp(5.8rem, 9vh, 7.5rem) 0 clamp(1.95rem, 4.2vh, 3.15rem); position: relative; width: 100%; }
-.hero-bg { animation: forestSettle 2.8s ease both; background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2)), linear-gradient(to bottom, rgba(10,25,10,0.35), rgba(10,25,10,0.45)), url('/assets/hero-forest.png') center/cover no-repeat; inset: 0; position: absolute; transform-origin: center; z-index: 0; }
+.hero-bg { background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2)), linear-gradient(to bottom, rgba(10,25,10,0.35), rgba(10,25,10,0.45)), url('/assets/hero-forest.png') center/cover no-repeat; inset: 0; position: absolute; z-index: 0; }
 .hero-content { animation: none; max-width: 760px; padding: 0 2rem; position: relative; text-align: center; z-index: 1; }
 @keyframes heroFade { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 .hero-title { color: #f5f0e8; font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(3.65rem, 7.5vw, 6.6rem); font-weight: 400; line-height: 1.04; margin-bottom: 0.55rem; text-shadow: 0 2px 30px rgba(0,0,0,0.4); }
@@ -61,8 +61,7 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .hero-walk-note { margin: calc(clamp(2rem, 4vh, 2.9rem) + 30px) auto 0; max-width: 470px; }
 .hero-walk-note h2 { color: rgba(245,240,232,0.92); font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(1.3rem, 2.2vw, 1.75rem); font-style: italic; font-weight: 400; margin-bottom: 0.75rem; }
 .echoes { background: #fbf7ee; overflow: hidden; padding: 5.5rem 2rem 4rem; position: relative; }
-.echoes-bg-texture { background-image: url('/assets/forest-clearing-background.png'); background-position: center; background-size: cover; inset: 0; opacity: 0.42; position: absolute; transform: scale(1.025); transform-origin: center; transition: opacity 1.2s ease, transform 1.2s ease; }
-.echoes.is-visible .echoes-bg-texture { animation: softBreath 9s ease-in-out 1.8s infinite; opacity: 0.58; transform: scale(1); }
+.echoes-bg-texture { background-image: url('/assets/forest-clearing-background.png'); background-position: center; background-size: cover; inset: 0; opacity: 0.58; position: absolute; }
 .echoes-bg-texture::after { background: rgba(255,255,255,0.72); content: ''; inset: 0; position: absolute; }
 .echoes-container { margin: 0 auto; max-width: 1200px; position: relative; }
 .echoes-header { align-items: center; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 3.5rem; opacity: 0; text-align: center; transform: translateY(26px); }
