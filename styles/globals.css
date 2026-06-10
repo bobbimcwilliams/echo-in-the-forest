@@ -110,12 +110,15 @@ body { font-family: 'Bitter', Georgia, serif; background: var(--cream); color: v
 .article-scripture-heading { border-top: 1px solid rgba(139,115,85,0.24); color: var(--forest-dark); font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.2rem); font-weight: 400; line-height: 1.2; margin: 4.7rem 0 1.2rem; padding-top: 2rem; }
 .article-section-title + .article-scripture-heading { margin-top: 3.2rem; }
 .article-section-subtitle { color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; line-height: 1.5; margin: 3rem 0 1rem; text-transform: uppercase; }
-.article-accordion { border-top: 1px solid rgba(139,115,85,0.24); border-bottom: 1px solid rgba(139,115,85,0.24); margin: 2rem 0 3rem; padding: 0.2rem 0; }
-.article-accordion summary { color: var(--gold); cursor: pointer; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; list-style: none; padding: 1rem 0; text-transform: uppercase; }
+.article-accordion { background: rgba(255,255,255,0.4); border: 1px solid rgba(139,115,85,0.24); border-left: 3px solid rgba(139,115,85,0.5); border-radius: 6px; box-shadow: 0 16px 42px rgba(44,31,14,0.08); margin: 1.5rem 0 3rem; padding: 0; }
+.article-accordion summary { align-items: center; color: var(--forest-dark); cursor: pointer; display: flex; font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(1.08rem, 2vw, 1.32rem); font-weight: 400; justify-content: space-between; line-height: 1.25; list-style: none; padding: 1rem 1.1rem; }
 .article-accordion summary::-webkit-details-marker { display: none; }
-.article-accordion summary::after { content: '+'; float: right; font-size: 1rem; line-height: 1; }
+.article-accordion summary::after { border: 1px solid rgba(139,115,85,0.34); border-radius: 999px; color: var(--gold); content: '+'; flex: 0 0 auto; font-family: 'Bitter', Georgia, serif; font-size: 1rem; height: 1.55rem; line-height: 1.4rem; margin-left: 1rem; text-align: center; width: 1.55rem; }
 .article-accordion[open] summary::after { content: '-'; }
-.article-accordion-content { animation: pageReveal 0.55s ease both; padding-top: 0.8rem; }
+.article-accordion-content { animation: pageReveal 0.55s ease both; border-top: 1px solid rgba(139,115,85,0.16); padding: 1.25rem 1.1rem 1.35rem; }
+.article-accordion-content p { color: var(--text-mid); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+.article-accordion-content p:last-child { margin-bottom: 0; }
+.article-accordion-content .article-scripture-heading { border-top: 0; font-size: clamp(1.35rem, 2.5vw, 1.75rem); margin: 0 0 1rem; padding-top: 0; }
 .pull-quote { border-left: 2px solid rgba(139,115,85,0.42); margin: 4.2rem auto; padding: 0.3rem 0 0.35rem clamp(1.4rem, 3vw, 2.2rem); text-align: left; }
 .article-body .pull-quote p { color: var(--forest-mid); font-family: 'Sorts Mill Goudy', Georgia, serif; font-size: clamp(2.05rem, 4vw, 2.9rem); font-style: italic; line-height: 1.24; margin: 0; max-width: 690px; }
 .article-closing, .related-writings { margin: 0 auto; max-width: 900px; padding: 3rem 2rem; text-align: center; }
