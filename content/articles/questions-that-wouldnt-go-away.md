@@ -53,7 +53,25 @@ This was one of the first passages I was taught pointed to homosexuality as a si
 
 ### The Scripture
 
-Genesis 19:1-11
+:::accordion Genesis 19:1-11
+
+### Sodom and Gomorrah Destroyed
+
+The two angels arrived at Sodom in the evening, and Lot was sitting in the gateway of the city. When he saw them, he got up to meet them and bowed down with his face to the ground. "My lords," he said, "please turn aside to your servant's house. You can wash your feet and spend the night and then go on your way early in the morning."
+
+"No," they answered, "we will spend the night in the square."
+
+But he insisted so strongly that they did go with him and entered his house. He prepared a meal for them, baking bread without yeast, and they ate.
+
+Before they had gone to bed, all the men from every part of the city of Sodom - both young and old - surrounded the house. They called to Lot, "Where are the men who came to you tonight? Bring them out to us so that we can have sex with them."
+
+Lot went outside to meet them and shut the door behind him and said, "No, my friends. Don't do this wicked thing. Look, I have two daughters who have never slept with a man. Let me bring them out to you, and you can do what you like with them. But don't do anything to these men, for they have come under the protection of my roof."
+
+"Get out of our way," they replied. "This fellow came here as a foreigner, and now he wants to play the judge! We'll treat you worse than them." They kept bringing pressure on Lot and moved forward to break down the door.
+
+But the men inside reached out and pulled Lot back into the house and shut the door. Then they struck the men who were at the door of the house, young and old, with blindness so that they could not find the door.
+
+:::
 
 ### How I Look at It Now
 
