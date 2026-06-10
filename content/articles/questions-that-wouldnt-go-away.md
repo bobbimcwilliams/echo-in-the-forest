@@ -53,7 +53,7 @@ This was one of the first passages I was taught pointed to homosexuality as a si
 
 ### The Scripture
 
-:::accordion Genesis 19:1-11
+:::accordion Genesis 19:1-11 (NIV)
 
 ### Sodom and Gomorrah Destroyed
 
@@ -117,9 +117,17 @@ The verses seem straightforward enough.
 
 ### The Scripture
 
-Leviticus 18:22
+:::accordion Leviticus 18:22 (NIV)
 
-Leviticus 20:13
+"Do not have sexual relations with a man as one does with a woman;
+
+:::
+
+:::accordion Leviticus 20:13 (NIV)
+
+"Do not have sexual relations with a man as one does with a woman;
+
+:::
 
 ### How I Look at It Now
 
@@ -177,7 +185,7 @@ Instead, it raised even more questions.
 
 ### The Scripture
 
-Romans 1:26-27
+Romans 1:26-27 (NIV)
 
 ### How I Look at It Now
 
@@ -243,9 +251,9 @@ If someone had asked me a few years ago where the Bible talks about homosexualit
 
 ### The Scripture
 
-1 Corinthians 6:9-10
+1 Corinthians 6:9-10 (NIV)
 
-1 Timothy 1:10
+1 Timothy 1:10 (NIV)
 
 ### How I Look at It Now
 
