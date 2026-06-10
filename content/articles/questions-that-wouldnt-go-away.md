@@ -1,5 +1,5 @@
 ---
-title: The Questions That Wouldn't Go Away
+title: Why I Don't Believe Being Gay Is a Sin
 slug: questions-that-wouldnt-go-away
 date: Feb. 6, 2026
 subtitle: On faith, scripture, and the questions I could no longer ignore.
