@@ -185,7 +185,11 @@ Instead, it raised even more questions.
 
 ### The Scripture
 
-Romans 1:26-27 (NIV)
+:::accordion Romans 1:26-27 (NIV)
+
+Because of this, God gave them over to shameful lusts. Even their women exchanged natural sexual relations for unnatural ones. In the same way the men also abandoned natural relations with women and were inflamed with lust for one another. Men committed shameful acts with other men, and received in themselves the due penalty for their error.
+
+:::
 
 ### How I Look at It Now
 
@@ -251,9 +255,17 @@ If someone had asked me a few years ago where the Bible talks about homosexualit
 
 ### The Scripture
 
-1 Corinthians 6:9-10 (NIV)
+:::accordion 1 Corinthians 6:9-10 (NIV)
 
-1 Timothy 1:10 (NIV)
+Or do you not know that wrongdoers will not inherit the kingdom of God? Do not be deceived: Neither the sexually immoral nor idolaters nor adulterers nor men who have sex with men [a] nor thieves nor the greedy nor drunkards nor slanderers nor swindlers will inherit the kingdom of God.
+
+:::
+
+:::accordion 1 Timothy 1:10 (NIV)
+
+for the sexually immoral, for those practicing homosexuality, for slave traders and liars and perjurers - and for whatever else is contrary to the sound doctrine
+
+:::
 
 ### How I Look at It Now
 
