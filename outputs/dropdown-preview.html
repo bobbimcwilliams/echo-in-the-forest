@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown Preview</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest-dark: #0d1f10;
+      --forest-mid: #1a3320;
+      --cream: #f5f0e8;
+      --warm-white: #faf8f3;
+      --gold: #8b7355;
+      --text-dark: #2c1f0e;
+      --text-mid: #5a4a35;
+    }
+    body {
+      background: linear-gradient(to bottom, rgba(250,248,243,0.9), rgba(245,240,232,0.96)), var(--warm-white);
+      color: var(--text-dark);
+      font-family: Georgia, serif;
+      padding: 3rem 1.5rem;
+    }
+    .article-body { margin: 0 auto; max-width: 760px; }
+    .article-body > p { font-size: 1.12rem; line-height: 2; margin-bottom: 1.8rem; }
+    .article-scripture-heading {
+      border-top: 1px solid rgba(139,115,85,0.24);
+      color: var(--forest-dark);
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 4.7rem 0 1.2rem;
+      padding-top: 2rem;
+    }
+    .article-section-subtitle {
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      line-height: 1.5;
+      margin: 3rem 0 1rem;
+      text-transform: uppercase;
+    }
+    .article-accordion {
+      background: rgba(255,255,255,0.4);
+      border: 1px solid rgba(139,115,85,0.24);
+      border-left: 3px solid rgba(139,115,85,0.5);
+      border-radius: 6px;
+      box-shadow: 0 16px 42px rgba(44,31,14,0.08);
+      margin: 1.5rem 0 3rem;
+      padding: 0;
+    }
+    .article-accordion summary {
+      align-items: center;
+      color: var(--forest-dark);
+      cursor: pointer;
+      display: flex;
+      font-size: clamp(1.08rem, 2vw, 1.32rem);
+      font-weight: 400;
+      justify-content: space-between;
+      line-height: 1.25;
+      list-style: none;
+      padding: 1rem 1.1rem;
+    }
+    .article-accordion summary::-webkit-details-marker { display: none; }
+    .article-accordion summary::after {
+      border: 1px solid rgba(139,115,85,0.34);
+      border-radius: 999px;
+      color: var(--gold);
+      content: '+';
+      flex: 0 0 auto;
+      font-size: 1rem;
+      height: 1.55rem;
+      line-height: 1.4rem;
+      margin-left: 1rem;
+      text-align: center;
+      width: 1.55rem;
+    }
+    .article-accordion[open] summary::after { content: '-'; }
+    .article-accordion-content {
+      border-top: 1px solid rgba(139,115,85,0.16);
+      padding: 1.25rem 1.1rem 1.35rem;
+    }
+    .article-accordion-content p {
+      color: var(--text-mid);
+      font-size: 1.02rem;
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+    .article-accordion-content p:last-child { margin-bottom: 0; }
+    .article-accordion-content .article-scripture-heading {
+      border-top: 0;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      margin: 0 0 1rem;
+      padding-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <article class="article-body">
+    <h3 class="article-scripture-heading">Sodom and Gomorrah (Genesis 19:1-11)</h3>
+    <p>This was one of the first passages I was taught pointed to homosexuality as a sin. But when I finally read it for myself, I found a story about violence, humiliation, and abuse of power, not a loving relationship between two people.</p>
+
+    <h3 class="article-section-subtitle">The Scripture</h3>
+    <details class="article-accordion">
+      <summary>Genesis 19:1-11 (NIV)</summary>
+      <div class="article-accordion-content">
+        <h3 class="article-scripture-heading">Sodom and Gomorrah Destroyed</h3>
+        <p>The two angels arrived at Sodom in the evening, and Lot was sitting in the gateway of the city. When he saw them, he got up to meet them and bowed down with his face to the ground. "My lords," he said, "please turn aside to your servant's house. You can wash your feet and spend the night and then go on your way early in the morning."</p>
+        <p>"No," they answered, "we will spend the night in the square."</p>
+        <p>But he insisted so strongly that they did go with him and entered his house. He prepared a meal for them, baking bread without yeast, and they ate.</p>
+      </div>
+    </details>
+
+    <h3 class="article-scripture-heading">Leviticus 18:22 &amp; 20:13</h3>
+    <p>These were probably the verses I heard quoted most often growing up. If someone wanted biblical proof that homosexuality was a sin, this was usually where the conversation ended.</p>
+
+    <h3 class="article-section-subtitle">The Scripture</h3>
+    <details class="article-accordion" open>
+      <summary>Leviticus 18:22 (NIV)</summary>
+      <div class="article-accordion-content">
+        <p>"Do not have sexual relations with a man as one does with a woman;</p>
+      </div>
+    </details>
+    <details class="article-accordion">
+      <summary>Leviticus 20:13 (NIV)</summary>
+      <div class="article-accordion-content">
+        <p>"Do not have sexual relations with a man as one does with a woman;</p>
+      </div>
+    </details>
+  </article>
+</body>
+</html>
