@@ -183,6 +183,18 @@ What I discovered wasn't the clear answer I thought I was looking for. What I fo
 
 I don't know where my journey goes from here. What I do know is that my core beliefs haven't changed. If anything, they've become more important to me. What has changed is how I approach them.
 
-For me, faith looks like being willing to ask questions. It looks like keeping an open mind. It looks like continuing to learn, grow, and seek understanding, even when the answers aren't as simple as I wish they were.
+What does my faith look like?
 
-Not having all the answers, but being willing to keep looking for them.
+It looks like...
+
+...being willing to ask questions.
+
+...keeping an open mind.
+
+...being willing to change my mind.
+
+...admitting when I'm wrong.
+
+But most importantly, my faith is not about having all the answers.
+
+**It's about finding peace in the journey.**
