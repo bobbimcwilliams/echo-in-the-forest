@@ -89,10 +89,16 @@ function ArticleCard({ article, featured = false }: { article: Article; featured
     <>
       <h3 className="card-title">{article.title}</h3>
       <p className="card-excerpt">{article.excerpt}</p>
-      <Link className="card-link" href={`/articles/${article.slug}`}>Continue Reading →</Link>
+      <span className="card-link">Continue Reading →</span>
     </>
   );
-  return featured ? <div className={className}><div className="featured-left">{inner}</div></div> : <div className={className}>{inner}</div>;
+  return featured ? (
+    <Link className={className} href={`/articles/${article.slug}`}>
+      <div className="featured-left">{inner}</div>
+    </Link>
+  ) : (
+    <Link className={className} href={`/articles/${article.slug}`}>{inner}</Link>
+  );
 }
 
 function Placeholder({ title, excerpt }: { title: string; excerpt: string }) {

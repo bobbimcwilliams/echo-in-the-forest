@@ -84,11 +84,20 @@ function renderMarkdown(markdown: string) {
       continue;
     }
     if (clean.startsWith('>')) {
-      rendered.push(<blockquote className="pull-quote" key={index}><p>{clean.replace(/^>\s?/, '')}</p></blockquote>);
+      rendered.push(<blockquote className="pull-quote" key={index}><p>{renderInlineMarkdown(clean.replace(/^>\s?/, ''))}</p></blockquote>);
       continue;
     }
-    rendered.push(<p key={index}>{clean}</p>);
+    rendered.push(<p key={index}>{renderInlineMarkdown(clean)}</p>);
   }
 
   return rendered;
+}
+
+function renderInlineMarkdown(text: string) {
+  return text.split(/(<strong>.*?<\/strong>|\*\*.*?\*\*)/g).map((part, index) => {
+    const strongTag = part.match(/^<strong>(.*?)<\/strong>$/);
+    if (strongTag) return <strong key={index}>{strongTag[1]}</strong>;
+    if (part.startsWith('**') && part.endsWith('**')) return <strong key={index}>{part.slice(2, -2)}</strong>;
+    return part;
+  });
 }

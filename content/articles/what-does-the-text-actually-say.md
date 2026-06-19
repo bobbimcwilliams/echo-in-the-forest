@@ -197,4 +197,4 @@ It looks like...
 
 But most importantly, my faith is not about having all the answers.
 
-**It's about finding peace in the journey.**
+<strong>It's about finding peace in the journey.</strong>
