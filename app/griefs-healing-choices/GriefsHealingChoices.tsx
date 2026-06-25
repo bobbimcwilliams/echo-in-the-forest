@@ -39,7 +39,7 @@ export function GriefsHealingChoices() {
           </button>
 
           <nav
-            className={`site-nav${menuOpen ? ' open' : ''}`}
+            className={`ghc-nav${menuOpen ? ' open' : ''}`}
             aria-label="Grief's Healing Choices navigation"
             onClick={() => setMenuOpen(false)}
           >

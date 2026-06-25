@@ -111,7 +111,7 @@ a {
   text-transform: uppercase;
 }
 
-.site-nav {
+.ghc-nav {
   display: flex;
   justify-content: center;
   gap: clamp(16px, 1.8vw, 24px);
@@ -119,14 +119,14 @@ a {
   font-weight: 600;
 }
 
-.site-nav a {
+.ghc-nav a {
   position: relative;
   padding: 23px 0;
   color: #62644e;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-.site-nav a::after {
+.ghc-nav a::after {
   position: absolute;
   bottom: -1px;
   left: 50%;
@@ -137,13 +137,13 @@ a {
   transition: left 180ms ease, width 180ms ease;
 }
 
-.site-nav a:hover::after,
-.site-nav a.active::after {
+.ghc-nav a:hover::after,
+.ghc-nav a.active::after {
   left: 0;
   width: 100%;
 }
 
-.site-nav a.active {
+.ghc-nav a.active {
   color: #454839;
 }
 
@@ -547,7 +547,7 @@ h1 em {
 .next-steps {
   padding: clamp(82px, 9vw, 120px) clamp(24px, 6vw, 90px)
     clamp(100px, 11vw, 150px);
-  color: var(--forest-deep);
+  color: #242424;
   background:
     radial-gradient(circle at 8% 15%, rgba(239, 185, 52, 0.15), transparent 23%),
     linear-gradient(180deg, #fffdf5 0%, #f0f6fd 100%);
@@ -590,7 +590,7 @@ h1 em {
 .next-steps__heading > p:last-child {
   max-width: 710px;
   margin: 25px auto 0;
-  color: #63789a;
+  color: #444;
   font-size: clamp(16px, 1.2vw, 18px);
   line-height: 1.75;
 }
@@ -662,7 +662,7 @@ h1 em {
 
 .resource-card p {
   margin: 0;
-  color: #6c7d98;
+  color: #4b4b4b;
   font-size: 15px;
   line-height: 1.7;
 }
@@ -674,7 +674,7 @@ h1 em {
   gap: 10px;
   margin-top: auto;
   padding-top: 29px;
-  color: var(--forest);
+  color: #292929;
   font-size: 13px;
   font-weight: 700;
 }
@@ -798,7 +798,7 @@ h1 em {
     grid-template-columns: 1fr auto;
   }
 
-  .site-nav,
+  .ghc-nav,
   .header-cta {
     display: none;
   }
@@ -821,7 +821,7 @@ h1 em {
     background: var(--forest);
   }
 
-  .site-nav.open {
+  .ghc-nav.open {
     position: absolute;
     top: 70px;
     right: 16px;
@@ -838,13 +838,13 @@ h1 em {
     backdrop-filter: blur(20px);
   }
 
-  .site-nav.open a {
+  .ghc-nav.open a {
     width: 100%;
     padding: 15px;
     text-align: center;
   }
 
-  .site-nav.open a::after {
+  .ghc-nav.open a::after {
     display: none;
   }
 
