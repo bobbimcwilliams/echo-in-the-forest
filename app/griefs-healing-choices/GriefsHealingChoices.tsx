@@ -17,7 +17,7 @@ export function GriefsHealingChoices() {
       />
       <link href="/griefs-healing-choices/styles.css" rel="stylesheet" />
 
-      <main className="hero">
+      <main className="ghc-hero">
         <div className="hero__shade" />
 
         <header className="site-header">
