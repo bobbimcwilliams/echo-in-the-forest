@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const videoPreviewUrl =
   'https://drive.google.com/file/d/1sQo5BW9Ka_wBKDHD_lxL5i2UALmA4pCU/preview';
@@ -8,6 +8,31 @@ const videoPreviewUrl =
 export function GriefsHealingChoices() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
+
+  useEffect(() => {
+    const animatedElements = document.querySelectorAll<HTMLElement>('[data-scroll-reveal]');
+
+    if (!('IntersectionObserver' in window)) {
+      animatedElements.forEach((element) => element.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -12% 0px', threshold: 0.18 }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -86,7 +111,7 @@ export function GriefsHealingChoices() {
 
       <section className="stories" id="explore" aria-labelledby="stories-title">
         <div className="stories__inner">
-          <div className="stories__copy">
+          <div className="stories__copy scroll-reveal" data-scroll-reveal>
             <p className="stories__eyebrow">Stories from our community</p>
             <h2 id="stories-title">
               Real stories. <em>Real hope.</em>
@@ -99,8 +124,11 @@ export function GriefsHealingChoices() {
           </div>
 
           <div
-            className={`video-placeholder${videoPlaying ? ' is-playing' : ''}`}
+            className={`video-placeholder scroll-reveal scroll-reveal--soft${
+              videoPlaying ? ' is-playing' : ''
+            }`}
             id="stories-video"
+            data-scroll-reveal
           >
             {videoPlaying && (
               <iframe
@@ -130,7 +158,7 @@ export function GriefsHealingChoices() {
 
       <section className="next-steps" aria-labelledby="next-steps-title">
         <div className="next-steps__inner">
-          <div className="next-steps__heading">
+          <div className="next-steps__heading scroll-reveal" data-scroll-reveal>
             <p className="next-steps__eyebrow">Continue at your own pace</p>
             <h2 id="next-steps-title">
               Take the <em>next step.</em>
@@ -143,7 +171,7 @@ export function GriefsHealingChoices() {
           </div>
 
           <div className="resource-grid" id="resources">
-            <article className="resource-card">
+            <article className="resource-card scroll-reveal" data-scroll-reveal>
               <div className="resource-card__icon" aria-hidden="true">
                 <svg viewBox="0 0 32 32">
                   <path d="M5.5 6.5h8.2c1.6 0 2.3.8 2.3 2.2v17c0-1.8-1.1-2.7-3.1-2.7H5.5V6.5Z" />
@@ -162,7 +190,11 @@ export function GriefsHealingChoices() {
               </a>
             </article>
 
-            <article className="resource-card" id="support">
+            <article
+              className="resource-card scroll-reveal"
+              id="support"
+              data-scroll-reveal
+            >
               <div className="resource-card__icon" aria-hidden="true">
                 <svg viewBox="0 0 32 32">
                   <circle cx="16" cy="10" r="4" />

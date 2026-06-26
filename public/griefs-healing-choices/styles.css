@@ -379,6 +379,25 @@ h1 em {
   text-align: center;
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 900ms ease,
+    transform 900ms cubic-bezier(0.2, 0.78, 0.22, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal--soft {
+  transform: translateY(22px) scale(0.985);
+  transition-duration: 1050ms;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 .stories__eyebrow {
   margin: 0 0 21px;
   color: #ffe18a;
@@ -618,10 +637,26 @@ h1 em {
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
 }
 
+.resource-card.scroll-reveal {
+  transition:
+    opacity 850ms ease,
+    transform 850ms cubic-bezier(0.2, 0.78, 0.22, 1),
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.resource-card:nth-child(2).scroll-reveal {
+  transition-delay: 120ms;
+}
+
 .resource-card:hover {
   border-color: rgba(198, 111, 89, 0.26);
   box-shadow: 0 22px 55px rgba(47, 72, 63, 0.13);
   transform: translateY(-7px);
+}
+
+.resource-card.scroll-reveal:not(.is-visible):hover {
+  transform: translateY(28px);
 }
 
 .resource-card__icon {
@@ -761,6 +796,22 @@ h1 em {
   }
   50% {
     transform: translateY(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 
