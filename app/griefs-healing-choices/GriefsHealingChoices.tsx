@@ -85,8 +85,8 @@ export function GriefsHealingChoices() {
         <section className="hero__content">
           <div className="hero__card">
             <h1>
-              <span>When loss changes everything,</span>
-              <em>you don&apos;t have to find your way alone.</em>
+              <span>Grief changes everything.</span>
+              <em>You don&apos;t have to carry it alone.</em>
             </h1>
 
             <p className="hero__intro">
@@ -96,7 +96,10 @@ export function GriefsHealingChoices() {
 
             <p className="welcome-note">
               <span aria-hidden="true">✦</span>
-              Wherever you are in your grief, you are welcome here.
+              <span>
+                GRIEF IS GOD&rsquo;S PATHWAY TO PEACE&rdquo;
+                <small>&mdash; John Baker, founder of Celebrate Recovery</small>
+              </span>
               <span aria-hidden="true">✦</span>
             </p>
           </div>

@@ -330,10 +330,27 @@ h1 em {
   animation: gentle-reveal 1s 500ms both;
 }
 
-.welcome-note span {
+.welcome-note > span[aria-hidden="true"] {
   color: var(--gold);
   font-style: normal;
   animation: soft-glow 4s ease-in-out infinite;
+}
+
+.welcome-note span:not([aria-hidden="true"]) {
+  display: grid;
+  gap: 5px;
+  color: inherit;
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+
+.welcome-note small {
+  color: #6a6f5a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .hero__footer {
