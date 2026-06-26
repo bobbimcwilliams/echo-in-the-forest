@@ -193,9 +193,12 @@ export function GriefsHealingChoices() {
               </a>
             </article>
 
-            <article
+            <a
               className="resource-card scroll-reveal"
+              href="https://www.facebook.com/groups/785608539723758"
               id="support"
+              rel="noopener noreferrer"
+              target="_blank"
               data-scroll-reveal
             >
               <div className="resource-card__icon" aria-hidden="true">
@@ -215,10 +218,10 @@ export function GriefsHealingChoices() {
                   and support.
                 </p>
               </div>
-              <a href="#support">
+              <span className="resource-card__link">
                 Join the Community <span aria-hidden="true">→</span>
-              </a>
-            </article>
+              </span>
+            </a>
           </div>
         </div>
       </section>

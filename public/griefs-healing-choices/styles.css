@@ -654,6 +654,11 @@ h1 em {
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
 }
 
+a.resource-card {
+  color: inherit;
+  text-decoration: none;
+}
+
 .resource-card.scroll-reveal {
   transition:
     opacity 850ms ease,
@@ -722,7 +727,8 @@ h1 em {
   line-height: 1.7;
 }
 
-.resource-card > a {
+.resource-card > a,
+.resource-card > .resource-card__link {
   align-self: flex-start;
   display: inline-flex;
   align-items: center;
@@ -734,13 +740,15 @@ h1 em {
   font-weight: 700;
 }
 
-.resource-card > a span {
+.resource-card > a span,
+.resource-card > .resource-card__link span {
   color: var(--coral);
   font-size: 18px;
   transition: transform 180ms ease;
 }
 
-.resource-card > a:hover span {
+.resource-card > a:hover span,
+.resource-card:hover > .resource-card__link span {
   transform: translateX(5px);
 }
 
