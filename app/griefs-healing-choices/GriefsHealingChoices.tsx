@@ -40,7 +40,7 @@ export function GriefsHealingChoices() {
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap"
         rel="stylesheet"
       />
-      <link href="/griefs-healing-choices/styles.css" rel="stylesheet" />
+      <link href="/griefs-healing-choices/styles.css?v=20260625-hero2" rel="stylesheet" />
 
       <main className="ghc-hero">
         <div className="hero__shade" />
