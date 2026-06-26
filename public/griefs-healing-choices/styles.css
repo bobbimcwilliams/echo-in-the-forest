@@ -188,10 +188,10 @@ a {
 
 .hero__content {
   position: absolute;
-  inset: 42px 0 64px;
+  inset: 0;
   display: grid;
   width: 100%;
-  padding: 0 32px;
+  padding: 86px 32px 76px;
   place-items: center;
 }
 
@@ -312,19 +312,19 @@ h1 em {
 .welcome-note {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 13px;
   justify-content: center;
   width: fit-content;
-  margin: 28px auto 0;
-  padding: 14px 22px;
+  margin: 56px auto 0;
+  padding: 19px 30px;
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 16px;
+  border-radius: 20px;
   color: #5b614d;
   background: rgba(255, 253, 245, 0.84);
-  box-shadow: 0 10px 30px rgba(54, 76, 66, 0.09);
+  box-shadow: 0 14px 38px rgba(54, 76, 66, 0.11);
   backdrop-filter: blur(10px);
   font-family: Georgia, serif;
-  font-size: 15px;
+  font-size: 17px;
   font-style: italic;
   text-shadow: 0 1px 8px rgba(255, 251, 240, 0.95);
   animation: gentle-reveal 1s 500ms both;
@@ -338,7 +338,7 @@ h1 em {
 
 .welcome-note span:not([aria-hidden="true"]) {
   display: grid;
-  gap: 5px;
+  gap: 7px;
   color: inherit;
   font-style: normal;
   letter-spacing: 0.03em;
@@ -347,7 +347,7 @@ h1 em {
 .welcome-note small {
   color: #6a6f5a;
   font-family: "DM Sans", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0;
@@ -838,7 +838,9 @@ h1 em {
   }
 
   .hero__content {
-    inset: 42px 0 58px;
+    inset: 0;
+    padding-top: 76px;
+    padding-bottom: 58px;
   }
 
   .hero__card {
@@ -859,8 +861,9 @@ h1 em {
   }
 
   .welcome-note {
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -1001,9 +1004,9 @@ h1 em {
   }
 
   .hero__content {
-    inset: 50px 0 62px;
+    inset: 0;
     width: 100%;
-    padding: 0 16px;
+    padding: 76px 16px 68px;
   }
 
   .hero__card {
@@ -1031,8 +1034,14 @@ h1 em {
   }
 
   .welcome-note {
+    margin-top: 38px;
+    padding: 17px 20px;
     text-align: center;
     line-height: 1.45;
+  }
+
+  .welcome-note small {
+    font-size: 11px;
   }
 
   .hero__footer {
