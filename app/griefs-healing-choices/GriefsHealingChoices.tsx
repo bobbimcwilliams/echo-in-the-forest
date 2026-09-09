@@ -71,7 +71,7 @@ export function GriefsHealingChoices() {
             <a className="active" href="#">
               Home
             </a>
-            <a href="#support">Find Support</a>
+            <a href="#find-a-group">Find Support</a>
             <a href="#resources">Resources</a>
             <a href="#about">About Us</a>
           </nav>
@@ -90,8 +90,8 @@ export function GriefsHealingChoices() {
             </h1>
 
             <p className="hero__intro">
-              You&apos;ll find a community that understands and listens without
-              judgment, and walks beside you with hope.
+              You&apos;ll find a community that understands and listens without judgment,<br />
+              and walks beside you with hope.
             </p>
 
             <p className="welcome-note">
@@ -159,7 +159,7 @@ export function GriefsHealingChoices() {
         </div>
       </section>
 
-      <section className="next-steps" aria-labelledby="next-steps-title">
+<section className="next-steps" aria-labelledby="next-steps-title">
         <div className="next-steps__inner">
           <div className="next-steps__heading scroll-reveal" data-scroll-reveal>
             <p className="next-steps__eyebrow">Continue at your own pace</p>
@@ -215,7 +215,7 @@ export function GriefsHealingChoices() {
                   and support.
                 </p>
               </div>
-              <a href="#support">
+              <a href="/griefs-healing-choices/find-support">
                 Join the Community <span aria-hidden="true">→</span>
               </a>
             </article>
