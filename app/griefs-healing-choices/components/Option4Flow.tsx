@@ -41,8 +41,8 @@ const GROUP_TAGS: Record<string, string[]> = {
 function matchScore(group: Group, category: GriefCategory, format: Format, frequency: Frequency, vibe: Vibe): number {
   let score = 0;
   if (group.category === category) score += 40;
-  if (format === 'Either' || group.format === format || (format === 'Either' && true)) score += 20;
-  if (format !== 'Either' && group.format === format) score += 10;
+  if (format === 'Either') score += 20;
+  else if (group.format === format) score += 30;
   if (frequency === 'Flexible') score += 15;
   else if (group.meetingSchedule.toLowerCase().includes(frequency.toLowerCase())) score += 20;
   const tags = GROUP_TAGS[group.id] ?? [];
