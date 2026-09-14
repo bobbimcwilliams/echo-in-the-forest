@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FindAGroup } from '../components/FindAGroup';
-import { Option2Flow } from '../components/Option2Flow';
 import { Option3Flow } from '../components/Option3Flow';
 import { Option4Flow } from '../components/Option4Flow';
 import { Option5Flow } from '../components/Option5Flow';
@@ -69,20 +67,6 @@ export function FindSupportPage() {
             </div>
 
             <div className="support-options">
-
-              {/* Option 1 — Browse and join a group */}
-              <div className="support-option-card">
-                <span className="option-pill">Option 1</span>
-                <FindAGroup />
-              </div>
-
-              {/* Option 2 — Inquiry form sent to a leader */}
-              <div className="support-option-card">
-                <span className="option-pill">Option 2</span>
-                <div className="find-group__panel">
-                  <Option2Flow />
-                </div>
-              </div>
 
               {/* Option 3 — Browse groups + start a group path */}
               <div className="support-option-card">
