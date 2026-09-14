@@ -3,19 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { FindAGroup } from '../components/FindAGroup';
-import { GRIEF_CATEGORIES, GriefCategory } from '../types';
-
-const EMPTY_FORM = { firstName: '', email: '', category: '' as GriefCategory | '', message: '' };
+import { Option2Flow } from '../components/Option2Flow';
+import { Option3Flow } from '../components/Option3Flow';
+import { Option4Flow } from '../components/Option4Flow';
+import { Option5Flow } from '../components/Option5Flow';
 
 export function FindSupportPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [form, setForm] = useState(EMPTY_FORM);
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
 
   return (
     <>
@@ -23,7 +17,7 @@ export function FindSupportPage() {
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap"
         rel="stylesheet"
       />
-      <link href="/griefs-healing-choices/styles.css?v=20260908-options" rel="stylesheet" />
+      <link href="/griefs-healing-choices/styles.css?v=20260910-option5" rel="stylesheet" />
 
       <div className="find-support-page">
         <header className="site-header">
@@ -76,118 +70,42 @@ export function FindSupportPage() {
 
             <div className="support-options">
 
-              {/* Option 1 — Browse & join a group */}
+              {/* Option 1 — Browse and join a group */}
               <div className="support-option-card">
                 <span className="option-pill">Option 1</span>
                 <FindAGroup />
               </div>
 
-              {/* Option 2 — Request more information */}
+              {/* Option 2 — Inquiry form sent to a leader */}
               <div className="support-option-card">
                 <span className="option-pill">Option 2</span>
+                <div className="find-group__panel">
+                  <Option2Flow />
+                </div>
+              </div>
 
-                {submitted ? (
-                  <div className="find-group__step">
-                    <div className="find-group__confirmation">
-                      <div className="confirmation__icon" aria-hidden="true">✦</div>
-                      <h3>We&apos;ll be in touch soon.</h3>
-                      <p>
-                        Thank you, {form.firstName}. Someone from our team will reach out
-                        to {form.email} with information about{' '}
-                        {form.category ? `groups for ${form.category.toLowerCase()}` : 'support groups'}.
-                        You don&apos;t have to figure this out alone.
-                      </p>
-                      <button
-                        className="btn-secondary"
-                        type="button"
-                        onClick={() => { setForm(EMPTY_FORM); setSubmitted(false); }}
-                      >
-                        Submit another request
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="find-group__step">
-                    <h3 className="find-group__question">Not sure where to start?</h3>
-                    <p className="find-group__question-sub">
-                      Tell us a little about what you&apos;re carrying and we&apos;ll
-                      reach out personally with the right information for you.
-                    </p>
+              {/* Option 3 — Browse groups + start a group path */}
+              <div className="support-option-card">
+                <span className="option-pill">Option 3</span>
+                <div className="find-group__panel">
+                  <Option3Flow />
+                </div>
+              </div>
 
-                    <form className="ghc-form" onSubmit={handleSubmit} noValidate>
-                      <div className="ghc-form__row">
-                        <div className="ghc-form__field">
-                          <label className="ghc-form__label" htmlFor="inq-first-name">
-                            First name
-                          </label>
-                          <input
-                            id="inq-first-name"
-                            type="text"
-                            className="ghc-form__input"
-                            placeholder="Your first name"
-                            required
-                            value={form.firstName}
-                            onChange={e => setForm(f => ({ ...f, firstName: e.target.value }))}
-                          />
-                        </div>
+              {/* Option 4 — Matching quiz */}
+              <div className="support-option-card">
+                <span className="option-pill">Option 4</span>
+                <div className="find-group__panel">
+                  <Option4Flow />
+                </div>
+              </div>
 
-                        <div className="ghc-form__field">
-                          <label className="ghc-form__label" htmlFor="inq-email">
-                            Email address
-                          </label>
-                          <input
-                            id="inq-email"
-                            type="email"
-                            className="ghc-form__input"
-                            placeholder="you@example.com"
-                            required
-                            value={form.email}
-                            onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="ghc-form__field">
-                        <label className="ghc-form__label" htmlFor="inq-category">
-                          What kind of loss are you experiencing?
-                        </label>
-                        <select
-                          id="inq-category"
-                          className="ghc-form__input ghc-form__select"
-                          value={form.category}
-                          onChange={e => setForm(f => ({ ...f, category: e.target.value as GriefCategory | '' }))}
-                        >
-                          <option value="">I&apos;d prefer not to say / not sure yet</option>
-                          {GRIEF_CATEGORIES.map(cat => (
-                            <option key={cat} value={cat}>{cat}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div className="ghc-form__field">
-                        <label className="ghc-form__label" htmlFor="inq-message">
-                          Anything else you&apos;d like us to know? <span className="ghc-form__optional">(optional)</span>
-                        </label>
-                        <textarea
-                          id="inq-message"
-                          className="ghc-form__textarea"
-                          rows={4}
-                          placeholder="Share as much or as little as you&apos;d like."
-                          value={form.message}
-                          onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="btn-primary"
-                        disabled={!form.firstName || !form.email}
-                      >
-                        Send my request
-                      </button>
-                    </form>
-                  </div>
-                )}
+              {/* Option 5 — Find people like me */}
+              <div className="support-option-card">
+                <span className="option-pill">Option 5</span>
+                <div className="find-group__panel">
+                  <Option5Flow />
+                </div>
               </div>
 
             </div>

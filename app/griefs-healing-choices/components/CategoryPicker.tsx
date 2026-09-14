@@ -21,7 +21,7 @@ export function CategoryPicker({ onSelect }: Props) {
             onClick={() => onSelect(category)}
             type="button"
           >
-            <span className="category-card__name">{category}</span>
+            <span className="category-card__name">{category.replace('Loss of a ', '')}</span>
           </button>
         ))}
       </div>
